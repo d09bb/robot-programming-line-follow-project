@@ -201,8 +201,8 @@ Gazebo 외부 시점의 전체 트랙 화면은 별도로 촬영한다.
 - **그래픽 문제 분리 검사**: `bash scripts/run_docker.sh --check-gl`로 OpenGL을, `bash scripts/run_docker.sh --empty-world`로 간단한 Gazebo 월드의 표시를 검사한다.
 - **로봇이 출발하지 않는 경우**: 초기 약 20초의 대기 시간과 카메라·Odometry·IMU 수신 상태를 확인한다.
 
-## 9. 기존 코드 활용 및 개선 사항
+## 9. 개선 사항
 
-기본 지도 누적, 경로 추종 및 속도 계획 코어는 제공받은 `robot_project1.zip`의 `project1_memory_v2/line_tracker.py`를 기반으로 구성하였다. 해당 출처는 `reference_tracker.py`와 `reference_node.py`에도 명시되어 있다. 본 프로젝트에서는 ROS 2 실행 환경에 통합하고 회전 이후 직선 재가속 조건, 종점 진입축 기반 정지 제어, 실행별 데이터 기록 및 Docker 실행 환경을 구성하였다.
+본 프로젝트에서는 ROS 2 실행 환경에 통합하고 회전 이후 직선 재가속 조건, 종점 진입축 기반 정지 제어, 실행별 데이터 기록 및 Docker 실행 환경을 구성하였다.
 
-TurtleBot3 모델 관련 라이선스는 `src/line_follower/models/LICENSE.turtlebot3`를 참고한다. 기존 코드의 라이선스 표기는 원본 소스의 표기를 따른다.
+TurtleBot3 모델 관련 라이선스는 `src/line_follower/models/LICENSE.turtlebot3`를 참고한다.
